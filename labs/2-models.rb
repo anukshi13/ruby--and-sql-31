@@ -20,6 +20,25 @@ Salesperson.destroy_all
 # 1b. check out the model file
 
 # 2. insert 1-2 rows in salespeople table.
+new_salespeople= Salesperson.new
+
+new_salespeople ["first_name"]= "Ben"
+new_salespeople ["last_name"] = "Red"
+new_salespeople ["email"]= "bb@gmail.com"
+
+puts new_salespeople.inspect 
+new_salespeople.save 
+puts "there are #{Salesperson.all.count} salespeople"
+
+new_salespeople2= Salesperson.new
+new_salespeople2 ["first_name"]= "Anukshi"
+new_salespeople2 ["last_name"] = "Mittal"
+new_salespeople2 ["email"]= "am@gmail.com"
+
+puts new_salespeople2.inspect 
+new_salespeople2.save 
+puts "there are #{Salesperson.all.count} salespeople"
+
 
 # 3. write code to display how many salespeople rows are in the database
 
@@ -30,7 +49,13 @@ Salesperson.destroy_all
 
 # CHALLENGE:
 # 5. write code to display each salesperson's full name
-
+salespeople = Salesperson.all
+for giraffe in salespeople 
+    first name= giraffe["first_name"]
+    last_name = giraffe["last_name"]
+    name = "#{first_name} #{last_name}"
+    puts name 
+end 
 # ---------------------------------
 # Salespeople: 2
 # Ben Block
